@@ -11,13 +11,8 @@ public class Student {
 		
 	}
 	
-	Student(String nm, int rll, int mrks){
-		this.name = nm;
-		this.roll = rll;
-		this.marks = mrks;
-	}
 	
-	public static void displayDetails() {
+	public  void displayDetails(Student s) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("---- Student Details ----"); 
 		
@@ -30,7 +25,9 @@ public class Student {
 		System.out.println("Enter Marks: ");
 		int studMarks = sc.nextInt();
 		
-		Student s = new Student(studName, studRoll, studMarks);
+		s.setName(studName);
+		s.setRoll(studRoll);
+		s.setMarks(studMarks);
 				
 		System.out.println(s.toString());
 		System.out.println("Grade is : "+ s.calculateGrade(studMarks));
@@ -54,7 +51,46 @@ public class Student {
 	public String toString() {
 		return "Name : "+this.name + "\n" + "Roll no. : "+this.roll + "\n" + "Marks : "+this.marks;
 	}
-	
+
+
+	public int getRoll() {
+		return roll;
+	}
+
+
+	public void setRoll(int roll) {
+		this.roll = roll;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public int getMarks() {
+		return marks;
+	}
+
+
+	public void setMarks(int marks) {
+		this.marks = marks;
+	}
+
+
+	public char getGrade() {
+		return grade;
+	}
+
+
+	public void setGrade(char grade) {
+		this.grade = grade;
+	}
 	
 }
 
