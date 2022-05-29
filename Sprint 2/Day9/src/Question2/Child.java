@@ -9,6 +9,7 @@ final class Child extends Parent{
 	@Override
 	void method1() {
 		System.out.println("Parent method-1 overridden inside Child");
+		System.out.println(super.number);
 	}
 	
 //	@Override
