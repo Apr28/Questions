@@ -23,9 +23,9 @@ public class Main {
 			if(num3 > 10){
 				message = "Welcome to Exception Handling ";
 			}
-			if(!(message.equals(null))) { 
-				System.out.println("Message is :"+message.toUpperCase());
-			}
+			
+			System.out.println("Message is :"+message.toUpperCase());
+	
 			
 		}
 		catch(InputMismatchException iE) {
